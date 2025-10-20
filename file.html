@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Test Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            padding: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .subtitle {
+            color: #764ba2;
+            font-size: 1.2em;
+            font-style: italic;
+        }
+        
+        h2 {
+            color: #764ba2;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+            border-left: 5px solid #667eea;
+            padding-left: 15px;
+        }
+        
+        h3 {
+            color: #667eea;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        .highlight {
+            background: linear-gradient(120deg, #ffd700 0%, #ffed4e 100%);
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        
+        .info-box {
+            background: #f0f7ff;
+            border-left: 5px solid #667eea;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .warning-box {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-size: 1.1em;
+        }
+        
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        tr:hover {
+            background: #e9ecef;
+        }
+        
+        .image-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .qr-code {
+            display: inline-block;
+            padding: 20px;
+            background: white;
+            border: 3px solid #667eea;
+            border-radius: 10px;
+            margin: 20px;
+        }
+        
+        blockquote {
+            border-left: 5px solid #764ba2;
+            padding: 15px 20px;
+            margin: 20px 0;
+            background: #f9f9f9;
+            font-style: italic;
+            color: #555;
+        }
+        
+        .footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 2px solid #667eea;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 5px 10px;
+            background: #667eea;
+            color: white;
+            border-radius: 15px;
+            font-size: 0.85em;
+            margin: 5px;
+        }
+        
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PDF Generation Test</h1>
+            <p class="subtitle">A Comprehensive HTML to PDF Conversion Demo</p>
+        </header>
+
+        <section>
+            <h2>Introduction</h2>
+            <p>
+                This document demonstrates the <span class="highlight">rich formatting capabilities</span> 
+                of the wkhtmltopdf engine. It includes various HTML and CSS features to test how well 
+                they convert to PDF format.
+            </p>
+            
+            <div class="info-box">
+                <strong>💡 Info:</strong> This blue box demonstrates custom styled containers with 
+                borders and background colors. Perfect for highlighting important information!
+            </div>
+        </section>
+
+        <section>
+            <h2>Text Formatting</h2>
+            <p>
+                This paragraph contains <strong>bold text</strong>, <em>italic text</em>, 
+                <u>underlined text</u>, and <code>inline code</code>. We can also combine them: 
+                <strong><em>bold and italic</em></strong>.
+            </p>
+            
+            <blockquote>
+                "The best way to predict the future is to invent it." - Alan Kay
+            </blockquote>
+        </section>
+
+        <section>
+            <h2>Lists and Organization</h2>
+            
+            <h3>Unordered List</h3>
+            <ul>
+                <li>First item with some longer text to show wrapping behavior</li>
+                <li>Second item
+                    <ul>
+                        <li>Nested item 1</li>
+                        <li>Nested item 2</li>
+                    </ul>
+                </li>
+                <li>Third item</li>
+            </ul>
+            
+            <h3>Ordered List</h3>
+            <ol>
+                <li>Step one: Initialize the process</li>
+                <li>Step two: Configure parameters</li>
+                <li>Step three: Execute and verify</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Data Tables</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Stock</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Laptop Pro 15"</td>
+                        <td>Electronics</td>
+                        <td>$1,299.99</td>
+                        <td>42</td>
+                    </tr>
+                    <tr>
+                        <td>Wireless Mouse</td>
+                        <td>Accessories</td>
+                        <td>$29.99</td>
+                        <td>156</td>
+                    </tr>
+                    <tr>
+                        <td>USB-C Hub</td>
+                        <td>Accessories</td>
+                        <td>$49.99</td>
+                        <td>89</td>
+                    </tr>
+                    <tr>
+                        <td>Mechanical Keyboard</td>
+                        <td>Peripherals</td>
+                        <td>$149.99</td>
+                        <td>23</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Images and QR Codes</h2>
+            <div class="image-container">
+                <div class="qr-code">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?data=Hello+World+from+wkhtmltopdf&size=150x150" 
+                         alt="QR Code" width="150" height="150">
+                    <p><small>Scan me: "Hello World from wkhtmltopdf"</small></p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Status Badges</h2>
+            <p>
+                <span class="badge">Active</span>
+                <span class="badge">Verified</span>
+                <span class="badge">Premium</span>
+                <span class="badge">New Feature</span>
+            </p>
+        </section>
+
+        <section>
+            <div class="warning-box">
+                <strong>⚠️ Warning:</strong> This yellow box demonstrates another type of alert box. 
+                Different colors can be used to convey different types of messages.
+            </div>
+        </section>
+
+        <section>
+            <h2>Technical Specifications</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>CSS Gradients</td>
+                        <td>✓ Supported</td>
+                    </tr>
+                    <tr>
+                        <td>Custom Fonts</td>
+                        <td>✓ Supported</td>
+                    </tr>
+                    <tr>
+                        <td>Border Radius</td>
+                        <td>✓ Supported</td>
+                    </tr>
+                    <tr>
+                        <td>Box Shadows</td>
+                        <td>✓ Supported</td>
+                    </tr>
+                    <tr>
+                        <td>External Images</td>
+                        <td>✓ Supported</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <footer class="footer">
+            <p>Generated with wkhtmltopdf • Document Version 1.0 • © 2025</p>
+            <p><small>This is a test document showcasing various HTML/CSS features</small></p>
+        </footer>
+    </div>
+</body>
+</html>
